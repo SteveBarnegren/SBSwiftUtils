@@ -31,4 +31,8 @@ class SBSwiftUtilsTests: XCTestCase {
         XCTAssertEqual(testString.trimmed(), "hello")
     }
     
+    func testTravisFail() {
+        XCTFail("This is a test")
+    }
+    
 }
