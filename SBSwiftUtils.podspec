@@ -18,7 +18,7 @@ Mostly extensions for Foundation types
   s.homepage         = 'https://github.com/SteveBarnegren/SBSwiftUtils'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'steve.barnegren@gmail.com' => 'steve.barnegren@gmail.com' }
-  s.source           = { :git => 'https://github.com/SteveBarnegren/SBUtils.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/SteveBarnegren/SBSwiftUtils.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/SteveBarnegren'
 
   s.ios.deployment_target = '8.0'
