@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode8.3
+xcode_project: SBUtils.xcodeproj
+xcode_scheme: SBUtils
+xcode_sdk: macosx10.12
