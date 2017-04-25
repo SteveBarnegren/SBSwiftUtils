@@ -1,5 +1,7 @@
 language: swift
 osx_image: xcode8.3
-xcode_project: SBUtils.xcodeproj
-xcode_scheme: SBUtils
+xcode_project: SBSwiftUtils.xcodeproj
+xcode_scheme: SBSwiftUtils
 xcode_sdk: macosx10.12
+
+script: xcodebuild test -project SBSwiftUtils.xcodeproj -scheme SBSwiftUtils -sdk macosx10.12
