@@ -17,4 +17,17 @@ public extension String {
     func trimmed() -> String {
         return trimmingCharacters(in: .whitespacesAndNewlines)
     }
+    
+    var pathExtension: String {
+        return (self as NSString).pathExtension
+    }
+    
+    func deletingPathExtension() -> String {
+        return (self as NSString).deletingPathExtension
+    }
+    
+    func contains(subString: String) -> Bool{
+        return self.range(of: subString) != nil
+    }
+
 }

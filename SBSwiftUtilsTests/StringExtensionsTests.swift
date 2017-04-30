@@ -31,4 +31,20 @@ class SBSwiftUtilsTests: XCTestCase {
         XCTAssertEqual(testString.trimmed(), "hello")
     }
     
+    // MARK: - Contains() tests
+    
+    func testContainsReturnsTrueWhenSubstringIsPresent() {
+        
+        let testString = "dsffaslhdas_Substring_jdskfds"
+        let substring = "Substring"
+        XCTAssertTrue(testString.contains(subString: substring))
+    }
+    
+    func testContainsReturnsFalseWhenSubstringIsPresent() {
+        
+        let testString = "sdjfkjhfhonjkvjdshfjkdjkf"
+        let substring = "Substring"
+        XCTAssertFalse(testString.contains(subString: substring))
+    }
+    
 }
