@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBSwiftUtils'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Collection of Swift utilities'
 
   s.description      = <<-DESC
@@ -22,6 +22,7 @@ Mostly extensions for Foundation types
   s.social_media_url = 'https://twitter.com/SteveBarnegren'
 
   s.ios.deployment_target = '8.0'
+  s.osx.deployment_target = '10.12'
 
   s.source_files = 'SBSwiftUtils/*.swift'
 
