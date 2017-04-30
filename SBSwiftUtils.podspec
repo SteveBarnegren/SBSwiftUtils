@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBSwiftUtils'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Collection of Swift utilities'
 
   s.description      = <<-DESC
