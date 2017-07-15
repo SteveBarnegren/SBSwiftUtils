@@ -11,6 +11,8 @@
 		091421931EAFBCC100718758 /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091421921EAFBCC100718758 /* StringExtensionsTests.swift */; };
 		091421951EAFBCC100718758 /* SBSwiftUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 091421871EAFBCC100718758 /* SBSwiftUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		091421A01EAFBD1500718758 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0914219F1EAFBD1500718758 /* String+Extensions.swift */; };
+		67993B971F1A2A5200F1CF95 /* VectorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67993B961F1A2A5200F1CF95 /* VectorTypes.swift */; };
+		67993B991F1A2C0F00F1CF95 /* VectorTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67993B981F1A2C0F00F1CF95 /* VectorTypesTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +33,8 @@
 		091421921EAFBCC100718758 /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 		091421941EAFBCC100718758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0914219F1EAFBD1500718758 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		67993B961F1A2A5200F1CF95 /* VectorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTypes.swift; sourceTree = "<group>"; };
+		67993B981F1A2C0F00F1CF95 /* VectorTypesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorTypesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				091421871EAFBCC100718758 /* SBSwiftUtils.h */,
+				67993B951F1A2A3400F1CF95 /* Types */,
 				0914219E1EAFBCF500718758 /* Extensions */,
 				091421881EAFBCC100718758 /* Info.plist */,
 			);
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				091421921EAFBCC100718758 /* StringExtensionsTests.swift */,
+				67993B981F1A2C0F00F1CF95 /* VectorTypesTests.swift */,
 				091421941EAFBCC100718758 /* Info.plist */,
 			);
 			path = SBSwiftUtilsTests;
@@ -95,6 +101,14 @@
 				0914219F1EAFBD1500718758 /* String+Extensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		67993B951F1A2A3400F1CF95 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				67993B961F1A2A5200F1CF95 /* VectorTypes.swift */,
+			);
+			name = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67993B971F1A2A5200F1CF95 /* VectorTypes.swift in Sources */,
 				091421A01EAFBD1500718758 /* String+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67993B991F1A2C0F00F1CF95 /* VectorTypesTests.swift in Sources */,
 				091421931EAFBCC100718758 /* StringExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +439,7 @@
 				0914219A1EAFBCC100718758 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0914219B1EAFBCC100718758 /* Build configuration list for PBXNativeTarget "SBSwiftUtilsTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +448,7 @@
 				0914219D1EAFBCC100718758 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
