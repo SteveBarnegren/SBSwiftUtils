@@ -130,6 +130,7 @@
 			buildConfigurationList = 091421981EAFBCC100718758 /* Build configuration list for PBXNativeTarget "SBSwiftUtils" */;
 			buildPhases = (
 				0914217F1EAFBCC100718758 /* Sources */,
+				6724C50720306FFF00EFC2A7 /* Swift Lint */,
 				091421801EAFBCC100718758 /* Frameworks */,
 				091421811EAFBCC100718758 /* Headers */,
 				091421821EAFBCC100718758 /* Resources */,
@@ -148,6 +149,7 @@
 			buildConfigurationList = 0914219B1EAFBCC100718758 /* Build configuration list for PBXNativeTarget "SBSwiftUtilsTests" */;
 			buildPhases = (
 				091421891EAFBCC100718758 /* Sources */,
+				6724C50620306A2700EFC2A7 /* Swift Lint */,
 				0914218A1EAFBCC100718758 /* Frameworks */,
 				0914218B1EAFBCC100718758 /* Resources */,
 			);
@@ -219,6 +221,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6724C50620306A2700EFC2A7 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		6724C50720306FFF00EFC2A7 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0914217F1EAFBCC100718758 /* Sources */ = {
@@ -381,7 +414,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Debug;
 		};
@@ -403,7 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.SBSwiftUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Release;
 		};
@@ -417,7 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.SBSwiftUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Debug;
 		};
@@ -431,7 +464,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.SBSwiftUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Release;
 		};

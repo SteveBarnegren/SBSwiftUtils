@@ -180,5 +180,4 @@ class VectorTypesTests: XCTestCase {
         XCTAssertEqual(v.v3, 4)
     }
     
-    
 }

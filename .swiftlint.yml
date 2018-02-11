@@ -1,0 +1,9 @@
+disabled_rules:
+  - nesting
+  - trailing_whitespace
+  - type_name
+  - identifier_name
+
+opt_in_rules:
+  - overridden_super_call
+  - prohibited_super_call
