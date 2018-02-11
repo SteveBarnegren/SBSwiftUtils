@@ -11,7 +11,7 @@ import Foundation
 public extension String {
     
     var length: Int {
-        return characters.count
+        return count
     }
     
     func trimmed() -> String {
