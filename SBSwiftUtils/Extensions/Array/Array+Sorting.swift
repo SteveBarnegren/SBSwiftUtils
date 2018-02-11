@@ -28,3 +28,24 @@ public extension Array where Element: Comparable {
         sort { $0 > $1 }
     }
 }
+
+// MARK: - Sort Ascending / Descending By
+
+public extension Array {
+    
+    func sortedAscendingBy<T: Comparable>(_ transform: (Element) -> T) -> [Element] {
+        return sorted { transform($0) < transform($1) }
+    }
+    
+    func sortedDescendingBy<T: Comparable>(_ transform: (Element) -> T) -> [Element] {
+        return sorted { transform($0) > transform($1) }
+    }
+    
+    mutating func sortAscendingBy<T: Comparable>(_ transform: (Element) -> T) {
+        sort { transform($0) < transform($1) }
+    }
+    
+    mutating func sortDescendingBy<T: Comparable>(_ transform: (Element) -> T) {
+        sort { transform($0) > transform($1) }
+    }
+}
