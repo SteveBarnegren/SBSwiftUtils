@@ -60,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				091421861EAFBCC100718758 /* SBSwiftUtils */,
-				091421911EAFBCC100718758 /* SBSwiftUtilsTests */,
+				091421911EAFBCC100718758 /* Tests */,
 				091421851EAFBCC100718758 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,14 +85,14 @@
 			path = SBSwiftUtils;
 			sourceTree = "<group>";
 		};
-		091421911EAFBCC100718758 /* SBSwiftUtilsTests */ = {
+		091421911EAFBCC100718758 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				091421921EAFBCC100718758 /* StringExtensionsTests.swift */,
-				67993B981F1A2C0F00F1CF95 /* VectorTypesTests.swift */,
+				6724C5082030906300EFC2A7 /* Extensions */,
+				6724C5092030906F00EFC2A7 /* Types */,
 				091421941EAFBCC100718758 /* Info.plist */,
 			);
-			path = SBSwiftUtilsTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		6724C5042030666500EFC2A7 /* Types */ = {
@@ -109,6 +109,22 @@
 				0914219F1EAFBD1500718758 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6724C5082030906300EFC2A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				091421921EAFBCC100718758 /* StringExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6724C5092030906F00EFC2A7 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				67993B981F1A2C0F00F1CF95 /* VectorTypesTests.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +462,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X7HC96WDW9;
-				INFOPLIST_FILE = SBSwiftUtilsTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.SBSwiftUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,7 +476,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = X7HC96WDW9;
-				INFOPLIST_FILE = SBSwiftUtilsTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stevebarnegren.SBSwiftUtilsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
