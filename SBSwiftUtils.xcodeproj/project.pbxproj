@@ -78,8 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				091421871EAFBCC100718758 /* SBSwiftUtils.h */,
-				67993B951F1A2A3400F1CF95 /* Types */,
-				0914219E1EAFBCF500718758 /* Extensions */,
+				6724C5052030667800EFC2A7 /* Extensions */,
+				6724C5042030666500EFC2A7 /* Types */,
 				091421881EAFBCC100718758 /* Info.plist */,
 			);
 			path = SBSwiftUtils;
@@ -95,20 +95,20 @@
 			path = SBSwiftUtilsTests;
 			sourceTree = "<group>";
 		};
-		0914219E1EAFBCF500718758 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				0914219F1EAFBD1500718758 /* String+Extensions.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		67993B951F1A2A3400F1CF95 /* Types */ = {
+		6724C5042030666500EFC2A7 /* Types */ = {
 			isa = PBXGroup;
 			children = (
 				67993B961F1A2A5200F1CF95 /* VectorTypes.swift */,
 			);
-			name = Types;
+			path = Types;
+			sourceTree = "<group>";
+		};
+		6724C5052030667800EFC2A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0914219F1EAFBD1500718758 /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
