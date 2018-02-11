@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SBSwiftUtils
+import SBSwiftUtils
 
 class SBSwiftUtilsTests: XCTestCase {
     
