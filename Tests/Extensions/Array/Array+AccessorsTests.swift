@@ -30,4 +30,20 @@ class Array_AccessorsTests: XCTestCase {
         XCTAssertEqual(array[maybe: 2], "monkey")
         XCTAssertNil(array[maybe: 3])
     }
+    
+    // MARK: - Throwing Accessor
+    
+    func testThrowingAccessor() {
+        
+        let array = ["a", "b", "c"]
+        
+        XCTAssertEqual(try array.at(throwing: 0), "a")
+        XCTAssertEqual(try array.at(throwing: 1), "b")
+        XCTAssertEqual(try array.at(throwing: 2), "c")
+        
+        do {
+            _ = try array.at(throwing: 3)
+            XCTFail("Should throw out of bounds error")
+        } catch {}
+    }
 }

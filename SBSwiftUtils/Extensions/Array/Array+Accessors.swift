@@ -8,9 +8,9 @@
 
 import Foundation
 
+// MARK: - Maybe Subscript
+
 public extension Array {
-    
-    // MARK: - Maybe Subscript
     
     subscript(maybe index: Int) -> Element? {
         get {
@@ -21,6 +21,24 @@ public extension Array {
             } else {
                 return self[index]
             }
+        }
+    }
+}
+
+// MARK: - Throwing Accessor
+
+public extension Array {
+    
+    enum ArrayAccessError: Error {
+        case outOfBounds
+    }
+    
+    func at(throwing index: Int) throws -> Element {
+        
+        if index < count {
+            return self[index]
+        } else {
+            throw ArrayAccessError.outOfBounds
         }
     }
 }
