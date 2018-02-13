@@ -39,6 +39,8 @@
 		67CE44362033918C00D03E29 /* Optional+BoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44352033918C00D03E29 /* Optional+BoolTests.swift */; };
 		67CE44392033929200D03E29 /* FreeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44382033929200D03E29 /* FreeFunctions.swift */; };
 		67CE443C203392FF00D03E29 /* FreeFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE443B203392FF00D03E29 /* FreeFunctionsTests.swift */; };
+		67CE443F2033941000D03E29 /* Numeric+Constrained.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE443E2033941000D03E29 /* Numeric+Constrained.swift */; };
+		67CE44422033945B00D03E29 /* Numeric+ConstrainedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44412033945B00D03E29 /* Numeric+ConstrainedTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		67CE44352033918C00D03E29 /* Optional+BoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+BoolTests.swift"; sourceTree = "<group>"; };
 		67CE44382033929200D03E29 /* FreeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeFunctions.swift; sourceTree = "<group>"; };
 		67CE443B203392FF00D03E29 /* FreeFunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeFunctionsTests.swift; sourceTree = "<group>"; };
+		67CE443E2033941000D03E29 /* Numeric+Constrained.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Constrained.swift"; sourceTree = "<group>"; };
+		67CE44412033945B00D03E29 /* Numeric+ConstrainedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+ConstrainedTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		091421911EAFBCC100718758 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				67CE443A203392DA00D03E29 /* Free Functions */,
 				6724C5082030906300EFC2A7 /* Extensions */,
 				6724C5092030906F00EFC2A7 /* Types */,
 				091421941EAFBCC100718758 /* Info.plist */,
@@ -162,6 +167,7 @@
 				6724C50C203091AB00EFC2A7 /* Array */,
 				67CE440D2030A38500D03E29 /* BidirectionalCollection */,
 				67CE442720338F9000D03E29 /* Collection */,
+				67CE443D203393EB00D03E29 /* Numeric */,
 				67CE442D203390D400D03E29 /* Optional */,
 				6724C50A2030917600EFC2A7 /* String */,
 			);
@@ -171,9 +177,9 @@
 		6724C5082030906300EFC2A7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				67CE443A203392DA00D03E29 /* Free Functions */,
 				6724C50F203091F600EFC2A7 /* Array */,
 				67CE442A20338FFD00D03E29 /* Collection */,
+				67CE44402033943C00D03E29 /* Numeric */,
 				67CE44322033916800D03E29 /* Optional */,
 				6724C50B2030918100EFC2A7 /* String */,
 			);
@@ -291,6 +297,22 @@
 				67CE443B203392FF00D03E29 /* FreeFunctionsTests.swift */,
 			);
 			path = "Free Functions";
+			sourceTree = "<group>";
+		};
+		67CE443D203393EB00D03E29 /* Numeric */ = {
+			isa = PBXGroup;
+			children = (
+				67CE443E2033941000D03E29 /* Numeric+Constrained.swift */,
+			);
+			path = Numeric;
+			sourceTree = "<group>";
+		};
+		67CE44402033943C00D03E29 /* Numeric */ = {
+			isa = PBXGroup;
+			children = (
+				67CE44412033945B00D03E29 /* Numeric+ConstrainedTests.swift */,
+			);
+			path = Numeric;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +476,7 @@
 				67CE442F203390FD00D03E29 /* Optional+Extensions.swift in Sources */,
 				67CE44182033863A00D03E29 /* Array+Filtering.swift in Sources */,
 				67CE4407203098DA00D03E29 /* Array+SortBySteps.swift in Sources */,
+				67CE443F2033941000D03E29 /* Numeric+Constrained.swift in Sources */,
 				6724C50E203091BB00EFC2A7 /* Array+Sorting.swift in Sources */,
 				67CE44202033882000D03E29 /* Array+Counting.swift in Sources */,
 			);
@@ -463,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67CE44422033945B00D03E29 /* Numeric+ConstrainedTests.swift in Sources */,
 				67CE4405203097CA00D03E29 /* Array+AccessorsTests.swift in Sources */,
 				67CE442620338D5700D03E29 /* Array+MatchingTests.swift in Sources */,
 				67CE441E203387C500D03E29 /* Array+OptionalTests.swift in Sources */,
