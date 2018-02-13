@@ -46,4 +46,20 @@ class Array_AccessorsTests: XCTestCase {
             XCTFail("Should throw out of bounds error")
         } catch {}
     }
+    
+    // MARK: - Pop First
+    
+    func testPopFirstReturnsNilForEmptyArray() {
+        
+        var array = [Int]()
+        XCTAssertNil(array.popFirst())
+    }
+    
+    func testPopFirstRemovesAndReturnsFirstItem() {
+        
+        var array = [1, 2, 3, 4, 5]
+        let first = array.popFirst()
+        XCTAssertEqual(array, [2, 3, 4, 5])
+        XCTAssertEqual(first, 1)
+    }
 }

@@ -42,3 +42,17 @@ public extension Array {
         }
     }
 }
+
+// MARK: - Pop First
+
+public extension Array {
+    
+    mutating func popFirst() -> Element? {
+        
+        if self.isEmpty {
+            return nil
+        } else {
+            return self.remove(at: 0)
+        }
+    }
+}
