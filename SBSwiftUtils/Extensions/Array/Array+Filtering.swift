@@ -13,4 +13,8 @@ public extension Array {
     mutating func filterInPlace(isIncluded: (Element) -> Bool) {
         self = self.filter(isIncluded)
     }
+    
+    mutating func remove(shouldRemove: (Element) -> Bool) {
+        self = self.filter { shouldRemove($0) == false }
+    }
 }
