@@ -32,6 +32,8 @@
 		67CE44222033884000D03E29 /* Array+CountingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44212033884000D03E29 /* Array+CountingTests.swift */; };
 		67CE442420338D0E00D03E29 /* Array+Matching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE442320338D0E00D03E29 /* Array+Matching.swift */; };
 		67CE442620338D5700D03E29 /* Array+MatchingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE442520338D5700D03E29 /* Array+MatchingTests.swift */; };
+		67CE442920338FBA00D03E29 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE442820338FBA00D03E29 /* Collection+Extensions.swift */; };
+		67CE442C2033901500D03E29 /* Collection+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE442B2033901500D03E29 /* Collection+ExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		67CE44212033884000D03E29 /* Array+CountingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+CountingTests.swift"; sourceTree = "<group>"; };
 		67CE442320338D0E00D03E29 /* Array+Matching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Matching.swift"; sourceTree = "<group>"; };
 		67CE442520338D5700D03E29 /* Array+MatchingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+MatchingTests.swift"; sourceTree = "<group>"; };
+		67CE442820338FBA00D03E29 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		67CE442B2033901500D03E29 /* Collection+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ExtensionsTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +148,9 @@
 		6724C5052030667800EFC2A7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				67CE440D2030A38500D03E29 /* BidirectionalCollection */,
 				6724C50C203091AB00EFC2A7 /* Array */,
+				67CE440D2030A38500D03E29 /* BidirectionalCollection */,
+				67CE442720338F9000D03E29 /* Collection */,
 				6724C50A2030917600EFC2A7 /* String */,
 			);
 			path = Extensions;
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				6724C50F203091F600EFC2A7 /* Array */,
+				67CE442A20338FFD00D03E29 /* Collection */,
 				6724C50B2030918100EFC2A7 /* String */,
 			);
 			path = Extensions;
@@ -222,6 +228,22 @@
 				67CE440F2030A3A700D03E29 /* BidirectionalCollection+Extensions.swift */,
 			);
 			path = BidirectionalCollection;
+			sourceTree = "<group>";
+		};
+		67CE442720338F9000D03E29 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				67CE442820338FBA00D03E29 /* Collection+Extensions.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		67CE442A20338FFD00D03E29 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				67CE442B2033901500D03E29 /* Collection+ExtensionsTests.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +400,7 @@
 				67CE440C2030A2F900D03E29 /* Array+Chunking.swift in Sources */,
 				091421A01EAFBD1500718758 /* String+Extensions.swift in Sources */,
 				67CE441C2033878D00D03E29 /* Array+Optional.swift in Sources */,
+				67CE442920338FBA00D03E29 /* Collection+Extensions.swift in Sources */,
 				67CE44142030AB5500D03E29 /* Array+Insertion.swift in Sources */,
 				67CE44182033863A00D03E29 /* Array+Filtering.swift in Sources */,
 				67CE4407203098DA00D03E29 /* Array+SortBySteps.swift in Sources */,
@@ -400,6 +423,7 @@
 				67CE44222033884000D03E29 /* Array+CountingTests.swift in Sources */,
 				67CE44162030ABBE00D03E29 /* Array+InsertionTests.swift in Sources */,
 				67CE441A2033867500D03E29 /* Array+Filtering.swift in Sources */,
+				67CE442C2033901500D03E29 /* Collection+ExtensionsTests.swift in Sources */,
 				67CE44092030999900D03E29 /* Array+SortByStepsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
