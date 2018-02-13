@@ -93,4 +93,64 @@ class Array_SortingTests: XCTestCase {
         XCTAssertEqual(array.map { $0.value }, [5, 4, 3, 2, 1])
     }
     
+    // MARK: - Bring To Front
+    
+    func testBringToFrontMovesSingleItemToFront() {
+        
+        var array = ["a", "b", "c", "d"]
+        array.bringToFront { $0 == "c" }
+        XCTAssertEqual(array, ["c", "a", "b", "d"])
+    }
+    
+    func testBringToFrontLeavesAlreadyFrontItemAtFront() {
+        
+        var array = ["a", "b", "c", "d"]
+        array.bringToFront { $0 == "a" }
+        XCTAssertEqual(array, ["a", "b", "c", "d"])
+    }
+    
+    func testBringToFrontBringsMultipleItemsToFront() {
+        
+        var array = ["a", "b", "c", "d", "c"]
+        array.bringToFront { $0 == "c" }
+        XCTAssertEqual(array, ["c", "c", "a", "b", "d"])
+    }
+    
+    func testBringToFrontMaintainsItemsOrder() {
+        
+        var array = ["a", "b", "c1", "c2", "d", "c3"]
+        array.bringToFront { $0.contains("c") }
+        XCTAssertEqual(array, ["c1", "c2", "c3", "a", "b", "d"])
+    }
+    
+    // MARK: - Send To Back
+    
+    func testSendToBackMovesSingleItemToBack() {
+        
+        var array = ["a", "b", "c", "d"]
+        array.sendToBack { $0 == "c" }
+        XCTAssertEqual(array, ["a", "b", "d", "c"])
+    }
+    
+    func testSendToBackLeavesAlreadyLastItemAtBack() {
+        
+        var array = ["a", "b", "c", "d"]
+        array.sendToBack { $0 == "d" }
+        XCTAssertEqual(array, ["a", "b", "c", "d"])
+    }
+    
+    func testSendToBackSendsMultipleItemsToBack() {
+        
+        var array = ["a", "b", "a", "c", "d"]
+        array.sendToBack { $0 == "a" }
+        XCTAssertEqual(array, ["b", "c", "d", "a", "a"])
+    }
+    
+    func testSendToBackMaintainsItemsOrder() {
+        
+        var array = ["a", "b", "c1", "c2", "d", "c3"]
+        array.sendToBack { $0.contains("c") }
+        XCTAssertEqual(array, ["a", "b", "d", "c1", "c2", "c3"])
+    }
+    
 }

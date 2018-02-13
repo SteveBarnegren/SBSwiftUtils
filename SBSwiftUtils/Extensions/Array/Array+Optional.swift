@@ -8,10 +8,9 @@
 
 import Foundation
 
-public extension Array  {
+public extension Array {
     
-    func flattened<T>() -> [T] where Element == Optional<T> {
+    func flattened<T>() -> [T] where Element == T? {
         return flatMap { $0 }
     }
 }
-
