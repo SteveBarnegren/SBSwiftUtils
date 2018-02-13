@@ -24,6 +24,6 @@ Mostly extensions for Foundation types
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.12'
 
-  s.source_files = 'SBSwiftUtils/*.swift'
+  s.source_files = 'SBSwiftUtils/**/*.swift'
 
 end
