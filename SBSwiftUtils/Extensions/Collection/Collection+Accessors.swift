@@ -12,6 +12,14 @@ import Foundation
 
 public extension Collection where IndexDistance == Int, Index == Int {
     
+    /// Subscript for accessing an item at an index, or `nil` if the index is out of
+    /// bounds
+    ///
+    ///      if let item = array[maybe: 2] {
+    ///          // ...
+    ///      }
+    ///
+    /// - Parameter index: Index of the item to access
     subscript(maybe index: Int) -> Element? {
         get {
             if index > count - 1 {
@@ -33,6 +41,12 @@ public enum CollectionAccessError: Error {
 
 public extension Collection where IndexDistance == Int, Index == Int {
     
+    /// Used to access an item at a given index in a throwing context. If the index is
+    /// out of bounds, an Error is thrown rather than an exception
+    ///
+    /// - Parameter index: Index of the item to access
+    /// - Returns: An instance of `Element`
+    /// - Throws: `CollectionAccessError.outOfBounds` if the index is out of bounds
     func at(throwing index: Index) throws -> Element {
         
         if index < count {

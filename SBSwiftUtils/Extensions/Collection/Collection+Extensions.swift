@@ -12,6 +12,7 @@ import Foundation
 
 public extension Collection {
     
+    /// The last index of the collection, or `nil` if the collection is empty
     var lastIndex: Int? {
         
         if count - 1 >= 0 {
@@ -26,6 +27,7 @@ public extension Collection {
 
 public extension Collection where Element: Comparable {
     
+    /// `true` if the elements in the collection are in ascending order
     var isAscending: Bool {
         
         var previousItem: Element?
@@ -42,6 +44,7 @@ public extension Collection where Element: Comparable {
         return true
     }
     
+    /// `true` if the elements in the collection are in descending order
     var isDescending: Bool {
         
         var previousItem: Element?

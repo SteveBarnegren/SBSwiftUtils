@@ -10,10 +10,13 @@ import Foundation
 
 public extension Optional where Wrapped == Bool {
     
-    // Can be used to test optional bools for 'falseness'
-    // For chained optionals, wrap in parentheses to 'flatten' the type
-    // eg. if (optionalType?.boolValue).isNilOrFalse { // do something }
-    
+    /// Can be used to test optional bools for 'falseness'. For chained optionals, wrap
+    /// in parentheses to 'flatten' the type
+    ///
+    ///     if (optionalType?.boolValue).isNilOrFalse {
+    ///         ...
+    ///     }
+    ///
     var isNilOrFalse: Bool {
         
         switch self {
@@ -23,12 +26,13 @@ public extension Optional where Wrapped == Bool {
             return !value
         }
     }
-    
-    // Can be used to test optional bools for 'trueness'
-    // Will be false if the optional is nil
-    // For chained optionals, wrap in parentheses to 'flatten' the type
-    // eg. if (optionalType?.boolValue).isTrue { // do something }
-    
+
+    /// Can be used to test optional bools for 'trueness'. Will be false if the optional
+    /// is `nil`. For chained optionals, wrap in parentheses to 'flatten' the type
+    ///     if (optionalType?.boolValue).isTrue {
+    ///         ...
+    ///     }
+    ///
     var isTrue: Bool {
         
         switch self {

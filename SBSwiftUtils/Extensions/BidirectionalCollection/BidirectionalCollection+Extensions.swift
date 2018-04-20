@@ -10,6 +10,9 @@ import Foundation
 
 extension BidirectionalCollection {
     
+    /// Converts `BidirectionalCollection` to Array
+    ///
+    /// - Returns: `Array` of the elements contained in the `BidirectionalCollection`
     func toArray() -> [Element] {
         return Array(self)
     }

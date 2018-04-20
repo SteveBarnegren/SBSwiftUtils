@@ -10,6 +10,10 @@ import Foundation
 
 public extension Array {
     
+    /// Returns the number of objects where `matches(element)` is `true`
+    ///
+    /// - Parameter matches: Closure to match elements by
+    /// - Returns: The number of elements where `matches` returns `true`
     func count(where matches: (Element) -> Bool) -> Int {
         var count = 0
         for element in self where matches(element) {

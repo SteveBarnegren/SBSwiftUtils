@@ -10,6 +10,10 @@ import Foundation
 
 public extension Array {
     
+    /// Returns `true` if `isMatching` returns `true` for every element in the array
+    ///
+    /// - Parameter isMatching: Closure to match elements
+    /// - Returns: `true` if all elements match, or `false` if they don't
     func allMatch(isMatching: (Element) -> Bool) -> Bool {
         
         if isEmpty {

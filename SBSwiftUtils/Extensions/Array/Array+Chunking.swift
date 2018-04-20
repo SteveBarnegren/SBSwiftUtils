@@ -12,6 +12,11 @@ import Foundation
 
 public extension Array {
     
+    /// Returns `[[Element]]` where the number of items in each inner array is equal to
+    /// `size`. The last array may have fewer items than `size` if `count % size != 0`
+    ///
+    /// - Parameter size: The number of items in each inner array
+    /// - Returns: Array of `[Element]`
     func chunked(size: Int) -> [[Element]] {
         
         return stride(from: 0, to: self.count, by: size).map {
@@ -26,6 +31,14 @@ public extension Array {
 
 public extension Array {
     
+    /// Returns `[[Element]]` where each new inner array begins when the result of
+    /// `key(element)` changes
+    ///
+    ///     [4, 4, 9, 2, 2, 2, 7, 7].chunked(atChangeTo: { $0 })
+    ///     // [[4, 4], [9], [2, 2, 2], [7, 7]]
+    ///
+    /// - Parameter key: Closure to transform `Element` to `Equatable`
+    /// - Returns: Array of `[Element]`
     func chunked<T: Equatable>(atChangeTo key: (Element) -> T) -> [[Element]] {
         
         var groups = [[Element]]()
@@ -60,10 +73,24 @@ public extension Array {
 
 public extension Array where Element: Comparable {
     
+    /// Returns `[[Element]]` where the inner arrays are ascending groupings of each
+    /// same value of `Element`
+    ///
+    ///     [2, 1, 4, 3, 2, 1, 3, 1].chunkedAscending()
+    ///     // [[1, 1, 1], [2, 2], [3, 3], [4]]
+    ///
+    /// - Returns: Array of `[Element]`
     func chunkedAscending() -> [[Element]] {
         return self.sortedAscending().chunked(atChangeTo: { $0 })
     }
     
+    /// Returns `[[Element]]` where the inner arrays are descending groupings of each
+    /// same value of `Element`
+    ///
+    ///     [2, 1, 4, 3, 2, 1, 3, 1].chunkedDescending()
+    ///     // [[4], [3, 3], [2, 2], [1, 1, 1]]
+    ///
+    /// - Returns: Array of `[Element]`
     func chunkedDescending() -> [[Element]] {
         return self.sortedDescending().chunked(atChangeTo: { $0 })
     }
@@ -73,10 +100,26 @@ public extension Array where Element: Comparable {
 
 public extension Array {
     
+    /// Returns `[[Element]]` where the inner arrays are ascending groupings of each
+    /// same value of the result of `key(element)`
+    ///
+    ///     ["ab", "a", "abc", "ab", "a", "abc", "a"].chunkedAscendingBy { $0.count }
+    ///     // [["a", "a", "a"], ["ab", "ab"], ["abc", "abc"]]
+    ///
+    /// - Parameter key: Closure to transform `Element` to `Comparable`
+    /// - Returns: Array of `[Element]`
     func chunkedAscendingBy<T: Comparable>(key: (Element) -> T) -> [[Element]] {
         return self.sortedAscendingBy(key).chunked(atChangeTo: key)
     }
     
+    /// Returns `[[Element]]` where the inner arrays are descending groupings of each
+    /// same value of the result of `key(element)`
+    ///
+    ///     ["ab", "a", "abc", "ab", "a", "abc", "a"].chunkedDescendingBy { $0.count }
+    ///     // [["abc", "abc"], ["ab", "ab"], ["a", "a", "a"]]
+    ///
+    /// - Parameter key: Closure to transform `Element` to `Comparable`
+    /// - Returns: Array of `[Element]`
     func chunkedDescendingBy<T: Comparable>(key: (Element) -> T) -> [[Element]] {
         return self.sortedDescendingBy(key).chunked(atChangeTo: key)
     }

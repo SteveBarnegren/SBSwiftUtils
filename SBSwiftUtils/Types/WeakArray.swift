@@ -21,6 +21,8 @@ private struct WeakItemWrapper<T: AnyObject> {
     }
 }
 
+/// A array implementation that holds it's items weakly. If an item becomes
+/// deallocated then it will be removed from the array
 public struct WeakArray<T: AnyObject>: RandomAccessCollection, Sequence {
     
     // MARK: - Manage wrapped items

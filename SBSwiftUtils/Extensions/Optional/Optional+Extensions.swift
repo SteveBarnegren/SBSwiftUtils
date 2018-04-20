@@ -10,6 +10,11 @@ import Foundation
 
 public extension Optional {
     
+    /// Force-unwraps an `Optional` with an error message
+    ///
+    /// - Parameter errorMessage: Message to be printed to the console should the
+    /// `Optional` be `nil`
+    /// - Returns: A non-optional value
     func require(_ errorMessage: String) -> Wrapped {
         
         switch self {
