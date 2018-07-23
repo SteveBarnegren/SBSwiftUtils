@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBSwiftUtils'
-  s.version          = '1.1'
+  s.version          = '1.1.1'
   s.summary          = 'Collection of Swift utilities'
 
   s.description      = <<-DESC
@@ -25,6 +25,6 @@ Mostly extensions for Foundation types
   s.osx.deployment_target = '10.12'
 
   s.source_files = 'SBSwiftUtils/**/*.swift'
-  s.swift_version = '4.0'
+  s.swift_version = '4.1'
 
 end

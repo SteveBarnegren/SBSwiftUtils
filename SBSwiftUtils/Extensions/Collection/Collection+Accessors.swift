@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Maybe Subscript
 
-public extension Collection where IndexDistance == Int, Index == Int {
+public extension Collection where Index == Int {
     
     /// Subscript for accessing an item at an index, or `nil` if the index is out of
     /// bounds
@@ -21,14 +21,13 @@ public extension Collection where IndexDistance == Int, Index == Int {
     ///
     /// - Parameter index: Index of the item to access
     subscript(maybe index: Int) -> Element? {
-        get {
-            if index > count - 1 {
-                return nil
-            } else if index < 0 {
-                return nil
-            } else {
-                return self[index]
-            }
+        
+        if index > count - 1 {
+            return nil
+        } else if index < 0 {
+            return nil
+        } else {
+            return self[index]
         }
     }
 }
@@ -39,7 +38,7 @@ public enum CollectionAccessError: Error {
     case outOfBounds
 }
 
-public extension Collection where IndexDistance == Int, Index == Int {
+public extension Collection where Index == Int {
     
     /// Used to access an item at a given index in a throwing context. If the index is
     /// out of bounds, an Error is thrown rather than an exception

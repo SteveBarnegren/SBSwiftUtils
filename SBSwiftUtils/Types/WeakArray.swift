@@ -34,7 +34,7 @@ public struct WeakArray<T: AnyObject>: RandomAccessCollection, Sequence {
     }
     
     private var unwrappedItems: [T] {
-        return wrappedItems.flatMap { $0.object }
+        return wrappedItems.compactMap { $0.object }
     }
     
     // MARK: - Init
@@ -61,7 +61,7 @@ public struct WeakArray<T: AnyObject>: RandomAccessCollection, Sequence {
     public mutating func remove(where shouldRemove: (T) -> Bool) {
         
         wrappedItems = wrappedItems
-            .flatMap { $0.object }
+            .compactMap { $0.object }
             .filter { !shouldRemove($0) }
             .map(WeakItemWrapper.init)
     }
@@ -93,7 +93,7 @@ public struct WeakArray<T: AnyObject>: RandomAccessCollection, Sequence {
     public var endIndex: Index { return unwrappedItems.endIndex }
     
     public subscript(index: Index) -> Element {
-        get { return unwrappedItems[index] }
+        return unwrappedItems[index]
     }
     
     public func index(after i: Index) -> Index {
