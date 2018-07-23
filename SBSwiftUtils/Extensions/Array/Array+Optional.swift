@@ -19,6 +19,6 @@ public extension Array {
     ///
     /// - Returns: Array of `Element` (from `Element?`)
     func flattened<T>() -> [T] where Element == T? {
-        return flatMap { $0 }
+        return compactMap { $0 }
     }
 }
