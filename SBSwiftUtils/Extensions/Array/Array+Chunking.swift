@@ -69,6 +69,43 @@ public extension Array {
     }
 }
 
+// MARK: - Chunked At
+
+public extension Array {
+    
+    /// Returns `[[Element]]` where each new inner array begins when the result of
+    /// `shouldStartNewChunk(element)` returns `true`
+    ///
+    ///     [1, 2, 1, 2, 3, 1, 2].chunked(at: { $0 == 1 })
+    ///     // [[1, 2], [1, 2, 3], [1, 2]]
+    ///
+    /// - Parameter key: Closure to transform `Element` to `Bool`
+    /// - Returns: Array of `[Element]`
+    func chunked(at shouldStartNewChunk: (Element) -> Bool) -> [[Element]] {
+        
+        var groups = [[Element]]()
+        
+        func addGroup(_ groupToAdd: [Element]) {
+            if groupToAdd.isEmpty == false {
+                groups.append(groupToAdd)
+            }
+        }
+        
+        var currentGroup = [Element]()
+        
+        for item in self {
+            if shouldStartNewChunk(item) {
+                addGroup(currentGroup)
+                currentGroup.removeAll()
+            }
+            currentGroup.append(item)
+        }
+        
+        addGroup(currentGroup)
+        return groups
+    }
+}
+
 // MARK: - Chunked Ascending / Descending
 
 public extension Array where Element: Comparable {
