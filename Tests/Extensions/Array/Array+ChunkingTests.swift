@@ -67,6 +67,32 @@ class Array_ChunkingTests: XCTestCase {
         XCTAssertEqual(try result.at(throwing: 2), [3, 3, 3])
     }
     
+    // MARK: - Chunk at
+    
+    func testChunkedAtEmptyArrayReturnsEmptyArray() {
+        
+        let array = [Int]()
+        XCTAssertTrue(array.chunked(at: { _ in true }).isEmpty)
+    }
+    
+    func testChunkedAtChunksWhenClosureReturnsTrue() {
+        
+        let array = [1, 2, 1, 2, 3, 1, 2]
+        XCTAssertEqual(array.chunked(at: { $0 == 1 }), [[1, 2], [1, 2, 3], [1, 2]])
+    }
+    
+    func testChunkedAtChunksCorrectlyWhenInputDoesntStartWithTrueValue() {
+        
+        let array = [3, 4, 1, 2, 1, 2, 3, 1, 2]
+        XCTAssertEqual(array.chunked(at: { $0 == 1 }), [[3, 4], [1, 2], [1, 2, 3], [1, 2]])
+    }
+    
+    func testChunkedAtChunksRepeatedTrueValues() {
+        
+        let array = [1, 1, 1]
+        XCTAssertEqual(array.chunked(at: { $0 == 1 }), [[1], [1], [1]])
+    }
+    
     // MARK: - Chunk Ascending / Descending
 
     func testChunkAscendingChunksAscending() {
