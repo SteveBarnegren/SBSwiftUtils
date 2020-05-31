@@ -78,6 +78,16 @@ extension Vector2 where T: FloatingPoint {
     }
 }
 
+// MARK: - Dot Product
+
+extension Vector2 where T: FloatingPoint {
+    
+    // The dot product of the vector with the passed in vector
+    public func dotProduct(with other: Self) -> T {
+        return (self.x * other.x) + (self.y * other.y)
+    }
+}
+
 // MARK: - Vector Operators
 
 public func + <T>(lhs: Vector2<T>, rhs: Vector2<T>) -> Vector2<T> where T: AdditiveArithmetic {

@@ -114,6 +114,22 @@ class Vector2Tests: XCTestCase {
         }
     }
     
+    // MARK: - Dot Product
+    
+    func test_DotProduct() throws {
+        
+        let accuracy = 0.001
+        let forward = Vector2(0.0, 1.0)
+        let right = Vector2(1.0, 0.0)
+        let backward = Vector2(0.0, -1.0)
+        let left = Vector2(-1.0, 0.0)
+        
+        XCTAssertEqual(forward.dotProduct(with: forward), 1, accuracy: accuracy)
+        XCTAssertEqual(forward.dotProduct(with: right), 0, accuracy: accuracy)
+        XCTAssertEqual(forward.dotProduct(with: backward), -1.0, accuracy: accuracy)
+        XCTAssertEqual(forward.dotProduct(with: left), 0, accuracy: accuracy)
+    }
+    
     // MARK: - Vector Operators
     
     func test_PlusOperator() throws {
