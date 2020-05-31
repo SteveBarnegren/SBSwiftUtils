@@ -104,6 +104,10 @@ public func * <T>(lhs: Vector2<T>, rhs: T) -> Vector2<T> where T: Numeric {
     return Vector2<T>(lhs.x * rhs, lhs.y * rhs)
 }
 
+public func * <T>(lhs: T, rhs: Vector2<T>) -> Vector2<T> where T: Numeric {
+    return Vector2<T>(rhs.x * lhs, rhs.y * lhs)
+}
+
 public func *= <T>(lhs: inout Vector2<T>, rhs: T) where T: Numeric {
     lhs.x *= rhs
     lhs.y *= rhs

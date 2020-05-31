@@ -140,6 +140,7 @@ class Vector2Tests: XCTestCase {
     
     func test_MultiplyWithScalar() throws {
         XCTAssertEqual(Vector2(4, 10) * 3, Vector2(12, 30))
+        XCTAssertEqual(3 * Vector2(4, 10), Vector2(12, 30))
     }
     
     func test_MultiplyWithScalar_Mutating() throws {
