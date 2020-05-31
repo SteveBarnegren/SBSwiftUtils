@@ -130,6 +130,18 @@ class Vector2Tests: XCTestCase {
         XCTAssertEqual(forward.dotProduct(with: left), 0, accuracy: accuracy)
     }
     
+    // MARK: - Distance
+    
+    func test_DistanceToOther() throws {
+        
+        XCTAssertEqual(Vector2(1.0, 1.0).distance(to: Vector2(1.0, 4.0)), 3.0)
+        XCTAssertEqual(Vector2(1.0, 1.0).distance(to: Vector2(1.0, -4.0)), 5.0)
+    }
+    
+    func test_DistanceSquaredToOther() throws {
+        XCTAssertEqual(Vector2(1.0, 1.0).distanceSquared(to: Vector2(1.0, 6.0)), 25.0)
+    }
+    
     // MARK: - Vector Operators
     
     func test_PlusOperator() throws {

@@ -88,6 +88,27 @@ extension Vector2 where T: FloatingPoint {
     }
 }
 
+// MARK: - Distance
+
+extension Vector2 where T: FloatingPoint {
+    
+    /// The distance to another vector
+    public func distance(to other: Self) -> T {
+        let xDiff = other.x - x
+        let yDiff = other.y - y
+        return sqrt(xDiff*xDiff+yDiff*yDiff)
+    }
+    
+    /// The distance squared to another vector. Avoids the square root operation for
+    /// speed. Useful for distance comparisions, where the exact distance doesn't need
+    /// to be known.
+    public func distanceSquared(to other: Self) -> T {
+        let xDiff = other.x - x
+        let yDiff = other.y - y
+        return xDiff*xDiff + yDiff*yDiff
+    }
+}
+
 // MARK: - Vector Operators
 
 public func + <T>(lhs: Vector2<T>, rhs: Vector2<T>) -> Vector2<T> where T: AdditiveArithmetic {
