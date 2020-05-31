@@ -9,7 +9,7 @@
 import Foundation
 
 /// A generic Vector3 type
-public struct Vector3<T: Any> {
+public struct Vector3<T> {
     
     public init(_ v0: T, _ v1: T, _ v2: T) {
         self.v0 = v0

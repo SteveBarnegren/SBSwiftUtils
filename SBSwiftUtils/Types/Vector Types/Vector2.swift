@@ -9,7 +9,7 @@
 import Foundation
 
 /// A generic Vector2 type
-public struct Vector2<T: Any> {
+public struct Vector2<T> {
     
     public init(_ v0: T, _ v1: T) {
         self.v0 = v0
@@ -31,5 +31,20 @@ public struct Vector2<T: Any> {
     public var y: T {
         get { return v1 }
         set { v1 = newValue }
+    }
+}
+
+// MARK: - Slope
+
+extension Vector2 where T: FloatingPoint {
+    
+    /// The slope of this vector
+    public var slope: T {
+        return y / x
+    }
+    
+    // The slope from this vector to another vector
+    public func slope(to other: Self) -> T {
+        return (other.y - self.y) / (other.x - self.x)
     }
 }
