@@ -46,6 +46,22 @@ class Vector2Tests: XCTestCase {
         XCTAssertEqual(v.v1, 11)
     }
     
+    func test_WidthHeightGetters() {
+        
+        let v = Vector2(1, 2)
+        XCTAssertEqual(v.width, 1)
+        XCTAssertEqual(v.height, 2)
+    }
+    
+    func test_WidthHeightSetters() {
+        
+        var v = Vector2(0, 0)
+        v.width = 10
+        v.height = 11
+        XCTAssertEqual(v.width, 10)
+        XCTAssertEqual(v.height, 11)
+    }
+    
     // MARK: - Equatable
     
     func test_Equatable() throws {

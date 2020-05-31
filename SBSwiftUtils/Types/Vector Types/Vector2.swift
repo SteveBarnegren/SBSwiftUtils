@@ -28,9 +28,20 @@ public struct Vector2<T> {
         get { return v0 }
         set { v0 = newValue }
     }
+    
     public var y: T {
         get { return v1 }
         set { v1 = newValue }
+    }
+    
+    public var width: T {
+        get { return v0 }
+        set { v0 = newValue}
+    }
+    
+    public var height: T {
+        get { return v1 }
+        set { v1 = newValue}
     }
 }
 
