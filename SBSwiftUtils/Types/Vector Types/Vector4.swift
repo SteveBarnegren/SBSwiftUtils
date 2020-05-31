@@ -72,4 +72,3 @@ public struct Vector4<T> {
     }
 
 }
-

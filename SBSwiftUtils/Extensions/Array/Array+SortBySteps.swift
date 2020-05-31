@@ -10,7 +10,7 @@ import Foundation
 
 public extension Array {
     
-    public class SortStep<Input> {
+    class SortStep<Input> {
         
         public enum Result {
             case ascending
