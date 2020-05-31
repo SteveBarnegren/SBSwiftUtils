@@ -45,6 +45,12 @@ public struct Vector2<T> {
     }
 }
 
+// MARK: - Zero
+
+extension Vector2 where T: ExpressibleByIntegerLiteral {
+    public static var zero: Vector2<T> { Vector2<T>(0, 0) }
+}
+
 // MARK: - Equatable
 
 extension Vector2: Equatable where T: Equatable {

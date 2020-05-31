@@ -62,6 +62,20 @@ class Vector2Tests: XCTestCase {
         XCTAssertEqual(v.height, 11)
     }
     
+    // MARK: - Zero
+    
+    func test_IntegerZeroVector() throws {
+        let v = Vector2<Int>.zero
+        XCTAssertEqual(v.x, 0)
+        XCTAssertEqual(v.y, 0)
+    }
+    
+    func test_FloatingPointZeroVector() throws {
+        let v = Vector2<Double>.zero
+        XCTAssertEqual(v.x, 0.0)
+        XCTAssertEqual(v.y, 0.0)
+    }
+    
     // MARK: - Equatable
     
     func test_Equatable() throws {
