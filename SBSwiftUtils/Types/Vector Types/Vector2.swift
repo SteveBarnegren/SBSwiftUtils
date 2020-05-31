@@ -34,6 +34,14 @@ public struct Vector2<T> {
     }
 }
 
+// MARK: - Equatable
+
+extension Vector2: Equatable where T: Equatable {
+    public static func == (lhs: Vector2, rhs: Vector2) -> Bool {
+        return lhs.v0 == rhs.v0 && lhs.v1 == rhs.v1
+    }
+}
+
 // MARK: - Slope
 
 extension Vector2 where T: FloatingPoint {
@@ -47,4 +55,65 @@ extension Vector2 where T: FloatingPoint {
     public func slope(to other: Self) -> T {
         return (other.y - self.y) / (other.x - self.x)
     }
+}
+
+// MARK: - Magnitude
+
+extension Vector2 where T: FloatingPoint {
+    
+    /// The magnitude of the vector
+    public var magnitude: T {
+        return sqrt(x*x + y*y)
+    }
+    
+    /// Creates a vector with the same direction and a magnitude of 1
+    public func normalized() -> Self {
+        let length = sqrt(x*x+y*y)
+        return Self(x/length, y/length)
+    }
+    
+    /// Creates a vector with the same direction and the passed in magnitude
+    public func with(magnitude newMagnitude: T) -> Self {
+        return self.normalized() * newMagnitude
+    }
+}
+
+// MARK: - Vector Operators
+
+public func + <T>(lhs: Vector2<T>, rhs: Vector2<T>) -> Vector2<T> where T: AdditiveArithmetic {
+    return Vector2<T>(lhs.x + rhs.x, lhs.y + rhs.y)
+}
+
+public func - <T>(lhs: Vector2<T>, rhs: Vector2<T>) -> Vector2<T> where T: AdditiveArithmetic {
+    return Vector2<T>(lhs.x - rhs.x, lhs.y - rhs.y)
+}
+
+public func += <T>(lhs: inout Vector2<T>, rhs: Vector2<T>) where T: AdditiveArithmetic {
+    lhs.x += rhs.x
+    lhs.y += rhs.y
+}
+
+public func -= <T>(lhs: inout Vector2<T>, rhs: Vector2<T>) where T: AdditiveArithmetic {
+    lhs.x -= rhs.x
+    lhs.y -= rhs.y
+}
+ 
+// MARK: - Scalar Operators
+
+public func * <T>(lhs: Vector2<T>, rhs: T) -> Vector2<T> where T: Numeric {
+    return Vector2<T>(lhs.x * rhs, lhs.y * rhs)
+}
+
+public func *= <T>(lhs: inout Vector2<T>, rhs: T) where T: Numeric {
+    lhs.x *= rhs
+    lhs.y *= rhs
+}
+
+public func / <T>(lhs: Vector2<T>, rhs: T) -> Vector2<T> where T: FloatingPoint {
+    return Vector2<T>(lhs.x / rhs, lhs.y / rhs)
+}
+
+public func /= <T>(lhs: inout Vector2<T>, rhs: T) where T: FloatingPoint {
+    lhs.x /= rhs
+    lhs.y /= rhs
 }
