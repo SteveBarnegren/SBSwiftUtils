@@ -126,6 +126,17 @@ extension Vector2 where T: FloatingPoint {
     }
 }
 
+// MARK: - Projection
+
+extension Vector2 where T: FloatingPoint {
+    
+    public func project(onTo other: Self) -> Self {
+        let otherMag = other.magnitude
+        let projectionScale = dotProduct(with: other) / (otherMag * otherMag)
+        return other * projectionScale
+    }
+}
+
 // MARK: - Vector Operators
 
 public func + <T>(lhs: Vector2<T>, rhs: Vector2<T>) -> Vector2<T> where T: AdditiveArithmetic {

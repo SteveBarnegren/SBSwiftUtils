@@ -172,6 +172,14 @@ class Vector2Tests: XCTestCase {
         XCTAssertEqual(Vector2(1.0, 1.0).distanceSquared(to: Vector2(1.0, 6.0)), 25.0)
     }
     
+    // MARK: - Projection
+    
+    func test_ProjectOnToOther() throws {
+        let vector = Vector2(4.0, 5.0)
+        let otherVector = Vector2(6.0, 0.0)
+        XCTAssertEqual(vector.project(onTo: otherVector), Vector2(4.0, 0.0))
+    }
+    
     // MARK: - Vector Operators
     
     func test_PlusOperator() throws {
