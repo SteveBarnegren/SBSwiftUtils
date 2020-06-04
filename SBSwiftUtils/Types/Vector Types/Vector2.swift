@@ -59,6 +59,43 @@ extension Vector2: Equatable where T: Equatable {
     }
 }
 
+// MARK: - Adding / Subtracting axis
+
+extension Vector2 where T: AdditiveArithmetic {
+
+    public func adding(x: T) -> Self {
+        return Self(self.x + x, self.y)
+    }
+    
+    public func adding(y: T) -> Self {
+        return Self(self.x, self.y + y)
+    }
+    
+    public func adding(width: T) -> Self {
+        return self.adding(x: width)
+    }
+    
+    public func adding(height: T) -> Self {
+        return self.adding(y: height)
+    }
+    
+    public func subtracting(x: T) -> Self {
+        return Self(self.x - x, self.y)
+    }
+    
+    public func subtracting(y: T) -> Self {
+        return Self(self.x, self.y - y)
+    }
+    
+    public func subtracting(width: T) -> Self {
+        return self.subtracting(x: width)
+    }
+    
+    public func subtracting(height: T) -> Self {
+        return self.subtracting(y: height)
+    }
+}
+
 // MARK: - Slope
 
 extension Vector2 where T: FloatingPoint {

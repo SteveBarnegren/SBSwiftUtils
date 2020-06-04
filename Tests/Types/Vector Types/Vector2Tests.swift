@@ -89,6 +89,40 @@ class Vector2Tests: XCTestCase {
         XCTAssertNotEqual(Vector2(2, 1), Vector2(1, 2))
     }
     
+    // MARK: - Adding / Subtracting axis
+    
+    func test_AddingX() throws {
+        XCTAssertEqual(Vector2(3.0, 4.0).adding(x: 5.0), Vector2(8.0, 4.0))
+    }
+    
+    func test_AddingY() throws {
+        XCTAssertEqual(Vector2(3.0, 4.0).adding(y: 5.0), Vector2(3.0, 9.0))
+    }
+    
+    func test_AddingWidth() throws {
+        XCTAssertEqual(Vector2(3.0, 4.0).adding(width: 5.0), Vector2(8.0, 4.0))
+    }
+    
+    func test_AddingHeight() throws {
+        XCTAssertEqual(Vector2(3.0, 4.0).adding(height: 5.0), Vector2(3.0, 9.0))
+    }
+    
+    func test_SubtractingX() throws {
+        XCTAssertEqual(Vector2(8.0, 4.0).subtracting(x: 5.0), Vector2(3.0, 4.0))
+    }
+    
+    func test_SubtractingY() throws {
+        XCTAssertEqual(Vector2(3.0, 9.0).subtracting(y: 5.0), Vector2(3.0, 4.0))
+    }
+    
+    func test_SubtractingWidth() throws {
+        XCTAssertEqual(Vector2(8.0, 4.0).subtracting(width: 5.0), Vector2(3.0, 4.0))
+    }
+    
+    func test_SubtractingHeight() throws {
+        XCTAssertEqual(Vector2(3.0, 9.0).subtracting(height: 5.0), Vector2(3.0, 4.0))
+    }
+    
     // MARK: - Slope
     
     func test_Slope() throws {
