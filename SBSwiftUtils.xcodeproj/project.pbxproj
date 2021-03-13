@@ -60,6 +60,8 @@
 		67CE44422033945B00D03E29 /* Numeric+ConstrainedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44412033945B00D03E29 /* Numeric+ConstrainedTests.swift */; };
 		67CE44452033950B00D03E29 /* SignedNumeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44442033950B00D03E29 /* SignedNumeric+Extensions.swift */; };
 		67CE44482033954000D03E29 /* SignedNumeric+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44472033954000D03E29 /* SignedNumeric+ExtensionsTests.swift */; };
+		67D444D225FD140E0055F654 /* Array+Maybe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D444D125FD140E0055F654 /* Array+Maybe.swift */; };
+		67D444D825FD14550055F654 /* Array+MaybeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D444D725FD14550055F654 /* Array+MaybeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,8 @@
 		67CE44412033945B00D03E29 /* Numeric+ConstrainedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+ConstrainedTests.swift"; sourceTree = "<group>"; };
 		67CE44442033950B00D03E29 /* SignedNumeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedNumeric+Extensions.swift"; sourceTree = "<group>"; };
 		67CE44472033954000D03E29 /* SignedNumeric+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedNumeric+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		67D444D125FD140E0055F654 /* Array+Maybe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Maybe.swift"; sourceTree = "<group>"; };
+		67D444D725FD14550055F654 /* Array+MaybeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+MaybeTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 				67CE44172033863A00D03E29 /* Array+Filtering.swift */,
 				67CE44132030AB5500D03E29 /* Array+Insertion.swift */,
 				67CE442320338D0E00D03E29 /* Array+Matching.swift */,
+				67D444D125FD140E0055F654 /* Array+Maybe.swift */,
 				67CE441B2033878D00D03E29 /* Array+Optional.swift */,
 				67CE4406203098DA00D03E29 /* Array+SortBySteps.swift */,
 				6724C50D203091BB00EFC2A7 /* Array+Sorting.swift */,
@@ -300,6 +305,7 @@
 				67CE44192033867500D03E29 /* Array+Filtering.swift */,
 				67CE44152030ABBE00D03E29 /* Array+InsertionTests.swift */,
 				67CE442520338D5700D03E29 /* Array+MatchingTests.swift */,
+				67D444D725FD14550055F654 /* Array+MaybeTests.swift */,
 				67CE441D203387C500D03E29 /* Array+OptionalTests.swift */,
 				67CE44082030999900D03E29 /* Array+SortByStepsTests.swift */,
 				6724C5102030920C00EFC2A7 /* Array+SortingTests.swift */,
@@ -588,6 +594,7 @@
 				67CE441C2033878D00D03E29 /* Array+Optional.swift in Sources */,
 				67CE442920338FBA00D03E29 /* Collection+Extensions.swift in Sources */,
 				67CE44142030AB5500D03E29 /* Array+Insertion.swift in Sources */,
+				67D444D225FD140E0055F654 /* Array+Maybe.swift in Sources */,
 				67CE442F203390FD00D03E29 /* Optional+Extensions.swift in Sources */,
 				679CD5CB2198998700499571 /* Substring+Extensions.swift in Sources */,
 				67CE44182033863A00D03E29 /* Array+Filtering.swift in Sources */,
@@ -615,6 +622,7 @@
 				67CE44482033954000D03E29 /* SignedNumeric+ExtensionsTests.swift in Sources */,
 				67CE4405203097CA00D03E29 /* Array+AccessorsTests.swift in Sources */,
 				67CE442620338D5700D03E29 /* Array+MatchingTests.swift in Sources */,
+				67D444D825FD14550055F654 /* Array+MaybeTests.swift in Sources */,
 				67CE441E203387C500D03E29 /* Array+OptionalTests.swift in Sources */,
 				67CE44362033918C00D03E29 /* Optional+BoolTests.swift in Sources */,
 				67203BA1247EEBCA00A7C861 /* Vector3Tests.swift in Sources */,
