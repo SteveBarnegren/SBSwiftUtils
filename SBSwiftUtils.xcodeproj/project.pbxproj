@@ -62,6 +62,8 @@
 		67CE44482033954000D03E29 /* SignedNumeric+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CE44472033954000D03E29 /* SignedNumeric+ExtensionsTests.swift */; };
 		67D444D225FD140E0055F654 /* Array+Maybe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D444D125FD140E0055F654 /* Array+Maybe.swift */; };
 		67D444D825FD14550055F654 /* Array+MaybeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D444D725FD14550055F654 /* Array+MaybeTests.swift */; };
+		AAFC8BAB29B7D67E009642A6 /* Sequence+EachWithIsFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8BAA29B7D67E009642A6 /* Sequence+EachWithIsFirst.swift */; };
+		AAFC8BAE29B7D6FA009642A6 /* Sequence+EachWithIsFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC8BAC29B7D6D2009642A6 /* Sequence+EachWithIsFirstTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +135,8 @@
 		67CE44472033954000D03E29 /* SignedNumeric+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedNumeric+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		67D444D125FD140E0055F654 /* Array+Maybe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Maybe.swift"; sourceTree = "<group>"; };
 		67D444D725FD14550055F654 /* Array+MaybeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+MaybeTests.swift"; sourceTree = "<group>"; };
+		AAFC8BAA29B7D67E009642A6 /* Sequence+EachWithIsFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+EachWithIsFirst.swift"; sourceTree = "<group>"; };
+		AAFC8BAC29B7D6D2009642A6 /* Sequence+EachWithIsFirstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+EachWithIsFirstTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 				67CE442720338F9000D03E29 /* Collection */,
 				67CE443D203393EB00D03E29 /* Numeric */,
 				67CE442D203390D400D03E29 /* Optional */,
+				AAFC8BA929B7D626009642A6 /* Sequence */,
 				67CE4443203394ED00D03E29 /* SignedNumeric */,
 				6724C50A2030917600EFC2A7 /* String */,
 				679CD5C92198996100499571 /* Substring */,
@@ -247,6 +252,7 @@
 				67CE442A20338FFD00D03E29 /* Collection */,
 				67CE44402033943C00D03E29 /* Numeric */,
 				67CE44322033916800D03E29 /* Optional */,
+				AAFC8BA829B7D60C009642A6 /* Sequence */,
 				67CE44462033952600D03E29 /* SignedNumeric */,
 				6724C50B2030918100EFC2A7 /* String */,
 			);
@@ -434,6 +440,22 @@
 			path = SignedNumeric;
 			sourceTree = "<group>";
 		};
+		AAFC8BA829B7D60C009642A6 /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC8BAC29B7D6D2009642A6 /* Sequence+EachWithIsFirstTests.swift */,
+			);
+			path = Sequence;
+			sourceTree = "<group>";
+		};
+		AAFC8BA929B7D626009642A6 /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				AAFC8BAA29B7D67E009642A6 /* Sequence+EachWithIsFirst.swift */,
+			);
+			path = Sequence;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -592,6 +614,7 @@
 				67CE440C2030A2F900D03E29 /* Array+Chunking.swift in Sources */,
 				091421A01EAFBD1500718758 /* String+Extensions.swift in Sources */,
 				67CE441C2033878D00D03E29 /* Array+Optional.swift in Sources */,
+				AAFC8BAB29B7D67E009642A6 /* Sequence+EachWithIsFirst.swift in Sources */,
 				67CE442920338FBA00D03E29 /* Collection+Extensions.swift in Sources */,
 				67CE44142030AB5500D03E29 /* Array+Insertion.swift in Sources */,
 				67D444D225FD140E0055F654 /* Array+Maybe.swift in Sources */,
@@ -621,6 +644,7 @@
 				67CE44422033945B00D03E29 /* Numeric+ConstrainedTests.swift in Sources */,
 				67CE44482033954000D03E29 /* SignedNumeric+ExtensionsTests.swift in Sources */,
 				67CE4405203097CA00D03E29 /* Array+AccessorsTests.swift in Sources */,
+				AAFC8BAE29B7D6FA009642A6 /* Sequence+EachWithIsFirstTests.swift in Sources */,
 				67CE442620338D5700D03E29 /* Array+MatchingTests.swift in Sources */,
 				67D444D825FD14550055F654 /* Array+MaybeTests.swift in Sources */,
 				67CE441E203387C500D03E29 /* Array+OptionalTests.swift in Sources */,
