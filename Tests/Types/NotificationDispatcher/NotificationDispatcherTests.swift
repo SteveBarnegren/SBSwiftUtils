@@ -10,11 +10,11 @@ import Foundation
 import XCTest
 import SBSwiftUtils
 
-private protocol ProtocolA: class {
+private protocol ProtocolA: AnyObject {
     func functionA()
 }
 
-private protocol ProtocolB: class {
+private protocol ProtocolB: AnyObject {
     func functionB()
 }
 
